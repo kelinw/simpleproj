@@ -1,0 +1,93 @@
+echo "# simpleproj" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/kelinw/simpleproj.git
+git push -u origin master
+
+----------------------------------------------------------------
+xuqinghua@thinkpad201:~$ mkdir simpleproj
+xuqinghua@thinkpad201:~$ cd simpleproj/
+xuqinghua@thinkpad201:~/simpleproj$ gvim guide.txt
+Gtk-Message: 15:26:19.916: Failed to load module "canberra-gtk-module"
+xuqinghua@thinkpad201:~/simpleproj$ git init
+Initialized empty Git repository in /home/xuqinghua/simpleproj/.git/
+xuqinghua@thinkpad201:~/simpleproj$ echo "# simpleproj" >> README.md
+xuqinghua@thinkpad201:~/simpleproj$ git add README.md
+xuqinghua@thinkpad201:~/simpleproj$ git commit -m "first commit"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'xuqinghua@thinkpad201.(none)')
+xuqinghua@thinkpad201:~/simpleproj$ git cofig --global kelinw@163.com
+git: 'cofig' is not a git command. See 'git --help'.
+
+The most similar command is
+	config
+xuqinghua@thinkpad201:~/simpleproj$ git config --global kelinw@163.com
+error: invalid key: kelinw@163.com
+xuqinghua@thinkpad201:~/simpleproj$ git config --global user.email  "kelinw@163.com"
+xuqinghua@thinkpad201:~/simpleproj$ git config --globl user.name "gbench"
+error: unknown option `globl'
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-regex]
+    --get-all             get all values: key [value-regex]
+    --get-regexp          get values for regexp: name-regex [value-regex]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value_regex]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-regex]
+    --unset-all           remove all matches: name [value-regex]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+
+xuqinghua@thinkpad201:~/simpleproj$ git config --global user.name "gbench"
+xuqinghua@thinkpad201:~/simpleproj$ git commit -m "first commit"
+[master (root-commit) 85189e5] first commit
+ 1 file changed, 1 insertion(+)
+ create mode 100644 README.md
+xuqinghua@thinkpad201:~/simpleproj$ git remote add origin https://github.com/kelinw/simpleproj.git
+xuqinghua@thinkpad201:~/simpleproj$ git push -u origin master
+Username for 'https://github.com': kelinw@163.com
+Password for 'https://kelinw@163.com@github.com': 
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 218 bytes | 218.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/kelinw/simpleproj.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+xuqinghua@thinkpad201:~/simpleproj$ 
